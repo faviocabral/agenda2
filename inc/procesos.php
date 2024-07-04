@@ -1202,7 +1202,7 @@ switch ($accion)
                 SELECT 
                 CASE WHEN col = 1 THEN 
                     '<tr >' || 
-                        '<td class=@btn-primary@>' || boxname || '</td>' ||
+                        '<td class=@f-asesor@>' || boxname || '</td>' ||
                         '<td id=@celda' || fila || col || '@' || ' onclick=@registro( ' || fila || ', ' || col || ', ' || fila ||', %'|| horname ||'%)@ hora=@' || horname || '@>' || ' <strong><br><br>LIBRE<br><br><br></strong> ' || '</td>'
                 WHEN item = (SELECT COUNT(*) FROM boxes CROSS JOIN horarios where boxes.estado = 1 and horarios.estado = 1 ) THEN 
                         '<td id=@celda' || fila || col || '@' || ' onclick=@registro( ' || fila || ', ' || col || ', ' || fila ||', %'|| horname || '%)@ hora=@' || horname || '@ >' || ' <strong><br><br>LIBRE<br><br><br></strong> ' || '</td>' ||

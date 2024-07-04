@@ -74,8 +74,12 @@ header('Access-Control-Allow-Origin: *');
 		padding-right: 3px;
 		font-weight: bold;
 	}
+	.f-asesor{
+		background:#5F9EA0;
+		color:white;
+		font-weight:bold;
+	}
 </style>
-
 
 <script>
 $(window).load(function()
@@ -1056,7 +1060,7 @@ table td[class*=col-],table th[class*=col-]{position:static;float:none;display:t
                     </div>  
                 </div>
                 <div class="col-sm-6" style="height:87px; position:relative; top:-34px;">
-					<span class="badge bg-primary" style= "font-size: 30px; background-color:#337ab7">CHANGAN <p id='totalChangan' >0</p> </span> 
+					<span class="badge bg-primary" style= "font-size: 30px; background-color:#333">CHANGAN <p id='totalChangan' >0</p> </span> 
 					<!-- <span class="badge bg-primary" style= "font-size: 30px; background-color:#333">Mazda <p id='totalMazda'>0</p> </span> 
 					<span class="badge bg-primary" style= "font-size: 30px; ">Mini BMW <p id='totalMini'>0</p> </span>  -->
 					<span class="badge bg-primary" style= "font-size: 30px; background-color:darkolivegreen">Taller <p id='totalTaller'>0</p> </span> 
@@ -1084,9 +1088,9 @@ table td[class*=col-],table th[class*=col-]{position:static;float:none;display:t
             	<!-- sapo -->
 				<table id="mytabla" style="width:100% ; table-layout: fixed;">
 					<thead >
-						<tr class="btn-primary" id="turnos">
+						<tr class="" style="background-color:#5F9EA0;" id="turnos">
 						</tr>
-						<tr class="btn-primary btn-xs" id="horario"> 
+						<tr class="text-white" style="background-color:#5F9EA0;" id="horario"> 
 						</tr>
 					</thead>
 					<tbody id="cupos">
@@ -2001,27 +2005,27 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 			if ( valor.length > 0 ){ 
 				$(this).html('LIBRE'); 
 				$(this).removeAttr('style'); 
-				$(this).css("{background-color:#eee; color:black;} :hover{background-color:#337ab7}");
+				$(this).css("{background-color:#eee; color:black;} :hover{background-color:#5F9EA0}");
 			}
 		 });
 		 setTimeout(function(){ consultarCasillasOcupadas(); }, 500);
 	}
 
 	function bloquearHorario(){
-		if($("#sucursal").val() === '11'){
-			//bloquear cabeceras 
-			$("#horario th").each(function(){
-				if("08:15 09:00 10:15 11:00 11:45 12:00 14:30".includes( $(this).html() )){
-					$(this).css({'backgroundColor':'brown'})
-				}	
-			})
-			//bloquear detalles 
-			$("#cupos td:contains('LIBRE')").each(function(){ 
-				if("08:15 09:00 10:15 11:00 11:45 12:00 14:30".includes( $(this).attr('hora') )){
-					$(this).html('')
-				}	
-			})		
-		}
+		// if($("#sucursal").val() === '11'){
+		// 	//bloquear cabeceras 
+		// 	$("#horario th").each(function(){
+		// 		if("08:15 09:00 10:15 11:00 11:45 12:00 14:30".includes( $(this).html() )){
+		// 			$(this).css({'backgroundColor':'brown'})
+		// 		}	
+		// 	})
+		// 	//bloquear detalles 
+		// 	$("#cupos td:contains('LIBRE')").each(function(){ 
+		// 		if("08:15 09:00 10:15 11:00 11:45 12:00 14:30".includes( $(this).attr('hora') )){
+		// 			$(this).html('')
+		// 		}	
+		// 	})		
+		// }
 	}
 
 	function consultar2(){
@@ -2030,7 +2034,8 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 			if ( valor.length > 0 ){
 				$(this).html('LIBRE');
 				$(this).removeAttr('style');
-				$(this).css("{background-color:#eee; color:black;} :hover{background-color:#337ab7}");
+				$(this).css("{background-color:#eee; color:black;} :hover{background-color:#5F9EA0}");
+				//sapito
 			}
 		 });
 		datosTablero(); 
@@ -2175,16 +2180,16 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 	
     function registro(f , c , box , hor){
 
-		if($("#sucursal").val() === '11'){
-			//nuevo pedido de bloqueo de fechas 
-			let fechaAgenda = $("#mydate").val() 
-			if(new Date( fechaAgenda ).getTime() > new Date("2024-01-28").getTime()){
-				if("08:15 09:00 10:15 11:00 11:45 12:00 14:30".includes(hor)){
-					alert('No se puede Agendar en estos horarios favor contactar con Callcenter !!!'); 
-					return;
-				}
-			}
-		}
+		// if($("#sucursal").val() === '11'){
+		// 	//nuevo pedido de bloqueo de fechas 
+		// 	let fechaAgenda = $("#mydate").val() 
+		// 	if(new Date( fechaAgenda ).getTime() > new Date("2024-01-28").getTime()){
+		// 		if("08:15 09:00 10:15 11:00 11:45 12:00 14:30".includes(hor)){
+		// 			alert('No se puede Agendar en estos horarios favor contactar con Callcenter !!!'); 
+		// 			return;
+		// 		}
+		// 	}
+		// }
 
 		//fco si 
 		if (hor == '12:00') { // no deberian poder 
@@ -2201,8 +2206,8 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 		}
 		if ( box == 3 && ( hor == '07:30' || hor == '08:00' ) && $("#sucursal").val() == 10 ) { // no deberian poder 
 			//
-			alert('Para Ricardo Maldonado favor agendar a partir de las 08:30 !!!!'); 
-			return ;
+			// alert('Para Ricardo Maldonado favor agendar a partir de las 08:30 !!!!'); 
+			// return ;
 		}
 
 
@@ -4258,6 +4263,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 			});
 			$("#cupos").empty();
 			$("#cupos").html(html);
+			$(".f-asesor").css('background','#5F9EA0')
 			datosTablero();
 			
 		})
