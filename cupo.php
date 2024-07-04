@@ -2001,7 +2001,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 
 		 $("#mytabla td[id^='celda']").each(function(){ 
 			console.log("seteo celda..."); 
-			var valor = $(this).html(); 
+			var valor = $(this).html(); 	
 			if ( valor.length > 0 ){ 
 				$(this).html('LIBRE'); 
 				$(this).removeAttr('style'); 
