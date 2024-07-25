@@ -2577,7 +2577,6 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 				`
 					<div class="row " style="margin-left:5px;">
 						<div class="radio-inline"> <label><input type="radio" name="baseRadio" value="base1" checked>Base 1</label> </div>		
-						<div class="radio-inline"> <label><input type="radio" name="baseRadio" value="base2" >Base 2</label> </div>
 					</div>
 					<div class="row input-lg"><input type="text" id="BuscarCliente"  placeholder="Nombre ... Cedula.. Chassis ... Chapa... " style="width:100%;" onkeypress="javascript:  if(event.keyCode == 13) MostrarCliente();"></div>
 					<div class="box">
