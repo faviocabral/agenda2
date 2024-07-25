@@ -2005,7 +2005,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 			if ( valor.length > 0 ){ 
 				$(this).html('LIBRE'); 
 				$(this).removeAttr('style'); 
-				$(this).css("{background-color:#eee; color:black;} :hover{background-color:#5F9EA0}");
+				$(this).css("{background-color:#eee; color:black;} :hover{background-color:#5F9EA0;}}");
 			}
 		 });
 		 setTimeout(function(){ consultarCasillasOcupadas(); }, 500);
@@ -2034,7 +2034,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 			if ( valor.length > 0 ){
 				$(this).html('LIBRE');
 				$(this).removeAttr('style');
-				$(this).css("{background-color:#eee; color:black;} :hover{background-color:#5F9EA0}");
+				$(this).css("{background-color:#eee; color:black;} :hover{background-color:#5F9EA0;}}");
 				//sapito
 			}
 		 });
