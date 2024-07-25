@@ -1355,7 +1355,7 @@ switch ($accion)
 				order by customer , hijo 
 			";
 
-			$exq = pg_query($con, $consulta);
+			$exq = pg_query($con2, $consulta);
 			if ( !$exq )
 			{
 				exit( "Error en la consulta SQL" );
