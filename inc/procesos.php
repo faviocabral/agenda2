@@ -1350,7 +1350,7 @@ switch ($accion)
 						,'' chassis  
 					from  clientes 
 					where cli_nombres like '%$CodigoCliente%'
-					limit
+					limit 20
 					)Tabla1 
 				order by customer , hijo 
 			";
