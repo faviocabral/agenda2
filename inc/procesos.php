@@ -1355,19 +1355,17 @@ switch ($accion)
 				order by customer , hijo 
 			";
 
-		$rs = odbc_exec( $con2, $consulta );
-		if ( !$rs )
-		{
-			exit( "Error en la consulta SQL" );
-			//echo "error en la consulta ";
-		}
-		//fco resultado de varios registros en json 
-		while ( $row = odbc_fetch_array($rs) )
-		{
-			$valor[] = array_map('utf8_encode', $row);
-		}	
-		echo json_encode( $valor ); //fco esta linea codifica para ser leido como json 
-		return ;
+			$exq = pg_query($con, $consulta);
+			if ( !$exq )
+			{
+				exit( "Error en la consulta SQL" );
+			}
+			$valor = array();
+			while( $row = pg_fetch_array($exq) ){
+				$valor[] = $row;
+			}
+			echo json_encode( $valor ); //fco esta linea codifica para ser leido como json 	
+			return ;
 	break;
 	case 'historial':
 		if( isset($_POST['chassis']) ) {
