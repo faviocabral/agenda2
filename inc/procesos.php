@@ -1358,7 +1358,7 @@ switch ($accion)
 			$exq = pg_query($con2, $consulta);
 			if ( !$exq )
 			{
-				exit( "Error en la consulta SQL" );
+				exit( "Arror en la consulta SQL" );
 			}
 			$valor = array();
 			while( $row = pg_fetch_array($exq) ){
