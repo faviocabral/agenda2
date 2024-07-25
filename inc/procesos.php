@@ -1335,11 +1335,11 @@ switch ($accion)
 					end html 
 				from ( 
 
-					select *,ROW_NUMBER() over(partition by customer order by customer ) hijo 
+					select *,1 hijo 
 					from (
 						select 
-						replace(cli_codigo, ' ', '') customer  
-						,replace( replace( replace( cli_nombres, char(34) , '' ) , char(39) , '' ), ';' , '') as custmrName 
+						cli_codigo customer
+						, cli_nombres as custmrName 
 						,'' as itemCode
 						,'' as itemName
 						,cli_telefono telefono
