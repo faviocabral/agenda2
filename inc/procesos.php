@@ -1355,7 +1355,7 @@ switch ($accion)
 				order by customer , hijo 
 			";
 
-		$rs = odbc_exec( $conSap, $consulta );
+		$rs = odbc_exec( $con2, $consulta );
 		if ( !$rs )
 		{
 			exit( "Error en la consulta SQL" );
