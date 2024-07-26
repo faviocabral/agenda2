@@ -1345,7 +1345,7 @@ switch ($accion)
 					,'' chassis 
 					, 1 hijo  
 					from  clientes 
-					where cli_nombres like '%$CodigoCliente%'
+					where lower(cli_nombres) like replace( lower( '%$CodigoCliente%' ), ' ', '%') 
 					limit 20
 				)Tabla1 
 				order by customer , hijo 
