@@ -1332,24 +1332,22 @@ switch ($accion)
 						'</div>'	
 					end html 
 				from ( 
-
-					select *,1 hijo 
-					from (
-						select 
-						cli_codigo customer
-						, cli_nombres as custmrName 
-						,'' as itemCode
-						,'' as itemName
-						,cli_telefono telefono
-						,cli_mail mail 
-						,'' marca  
-						,'' modelo 
-						,'' color  
-						,'' chassis  
+					select 
+					cli_codigo customer
+					, cli_nombres as custmrName 
+					,'' as itemCode
+					,'' as itemName
+					,cli_telefono telefono
+					,cli_mail mail 
+					,'' marca  
+					,'' modelo 
+					,'' color  
+					,'' chassis 
+					, 1 hijo  
 					from  clientes 
 					where cli_nombres like '%$CodigoCliente%'
 					limit 20
-					)Tabla1 
+				)Tabla1 
 				order by customer , hijo 
 			";
 
