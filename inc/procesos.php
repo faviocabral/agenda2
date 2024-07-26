@@ -1317,16 +1317,16 @@ switch ($accion)
 				select 
 					case when hijo = 1 then 
 						'<div class=%panel-heading%  data-toggle=%collapse% data-parent=%#accordion% href=%.' ||  customer ||  '% data-trigger=%focus% >' || 
-							'<span class=%glyphicon glyphicon-user%></span>&nbsp;' || customer|| ' - '||  custmrName || ' - '||  isnull(telefono,'') || 
+							'<span class=%glyphicon glyphicon-user%></span>&nbsp;' || customer|| ' - '||  custmrName || ' - '||  coalesce(telefono,'') || 
 						'</div>' || 
 						'<div class=%panel-collapse collapse list-group-item-'||  CASE when hijo % 2 = 0 then 'danger ' else 'info ' end ||  customer ||  '%>' || 
-							'<div class=%panel-body% id=%'||  itemCode || '% onclick=%AsignarCliente(@' ||  customer ||  '@,@' || custmrName||  '@,@' ||  isnull(telefono,'') ||  '@,@' ||  itemcode ||  '@,@'||  itemName || '@,@'||  color || '@,@'||  marca || '@,@'||  modelo || '@,@'||  mail || '@)% > ' || 
+							'<div class=%panel-body% id=%'||  itemCode || '% onclick=%AsignarCliente(@' ||  customer ||  '@,@' || custmrName||  '@,@' ||  coalesce(telefono,'') ||  '@,@' ||  itemcode ||  '@,@'||  itemName || '@,@'||  color || '@,@'||  marca || '@,@'||  modelo || '@,@'||  mail || '@)% > ' || 
 								'<i class=%fa fa-car% aria-hidden=%true%></i>&nbsp;&nbsp;' ||  itemCode ||  ' - ' ||  itemName ||  
 							'</div>' || 
 						'</div>'	
 					else 
 						'<div class=% panel-collapse collapse list-group-item-'||  CASE when hijo % 2 = 0 then 'danger ' else 'info ' end ||  customer ||  '%>' || 
-							'<div class=%panel-body% id=%'||  itemCode || '% onclick=%AsignarCliente(@' ||  customer ||  '@,@' || custmrName||  '@,@' ||  isnull(telefono,'') ||  '@,@' ||  itemcode ||  '@,@'||  itemName || '@,@'||  color || '@,@'||  marca || '@,@'||  modelo || '@,@'||  mail || '@)%> ' || 
+							'<div class=%panel-body% id=%'||  itemCode || '% onclick=%AsignarCliente(@' ||  customer ||  '@,@' || custmrName||  '@,@' ||  coalesce(telefono,'') ||  '@,@' ||  itemcode ||  '@,@'||  itemName || '@,@'||  color || '@,@'||  marca || '@,@'||  modelo || '@,@'||  mail || '@)%> ' || 
 								'<i class=%fa fa-car% aria-hidden=%true%></i>&nbsp;&nbsp;' ||  itemCode ||  ' - ' ||  itemName ||  
 							'</div>' +
 						'</div>'	
