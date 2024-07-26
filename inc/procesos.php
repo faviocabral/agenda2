@@ -1328,7 +1328,7 @@ switch ($accion)
 						'<div class=% panel-collapse collapse list-group-item-'||  CASE when hijo % 2 = 0 then 'danger ' else 'info ' end ||  customer ||  '%>' || 
 							'<div class=%panel-body% id=%'||  itemCode || '% onclick=%AsignarCliente(@' ||  customer ||  '@,@' || custmrName||  '@,@' ||  coalesce(telefono,'') ||  '@,@' ||  itemcode ||  '@,@'||  itemName || '@,@'||  color || '@,@'||  marca || '@,@'||  modelo || '@,@'||  mail || '@)%> ' || 
 								'<i class=%fa fa-car% aria-hidden=%true%></i>&nbsp;&nbsp;' ||  itemCode ||  ' - ' ||  itemName ||  
-							'</div>' +
+							'</div>' ||
 						'</div>'	
 					end html 
 				from ( 
