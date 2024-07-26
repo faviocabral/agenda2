@@ -2614,7 +2614,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 					var html = "";
 					$('#Resultado > *').remove(); //fco vacia el body de la tabla 
 					rs.forEach( function ( rs2 ){ //fco recorre la lista de resultados por cada  objeto[](campos[])
-						var callid = Object.keys(rs2); //fco captura los nombres de los campos 
+						var callid = Object.keys(rs2['html']); //fco captura los nombres de los campos 
 						Object.keys(rs2).forEach(function(key) {  //fco recorre los campos con sus valores 
 							campo = "#" + callid[id] , id++; //fco esta linea es para asignar automaticamente con el campo del form -> $(#campo).val(rs2[key]) //este apartado asigna al form 
 							html = rs2[key];
