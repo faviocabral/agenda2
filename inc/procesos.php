@@ -1313,7 +1313,6 @@ switch ($accion)
 		//fco sql server toma la '' como ' en la consulta a tener en cuenta cuando se quiere trabajar con las comillas por en php uso " para que no se solapen.. 
 		//fco aqui ya armo el html para el retorno de la consulta de clientes para tener un codigo limpio en php y javascript
 
-		$base = $_POST['base'];
 			$consulta = 
 			"
 				select 
@@ -1358,7 +1357,7 @@ switch ($accion)
 			$exq = pg_query($con2, $consulta);
 			if ( !$exq )
 			{
-				exit( "Arror en la consulta SQL" );
+				exit( "Error en la consulta SQL" );
 			}
 			$valor = array();
 			while( $row = pg_fetch_array($exq) ){
