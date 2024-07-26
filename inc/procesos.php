@@ -1316,24 +1316,24 @@ switch ($accion)
 			"
 				select 
 					case when hijo = 1 then 
-						'<div class=%panel-heading%  data-toggle=%collapse% data-parent=%#accordion% href=%.' + customer + '% data-trigger=%focus% >' +
-							'<span class=%glyphicon glyphicon-user%></span>&nbsp;' +customer+' - '+ custmrName +' - '+ isnull(telefono,'') +
-						'</div>' +
-						'<div class=%panel-collapse collapse list-group-item-'+ CASE when hijo % 2 = 0 then 'danger ' else 'info ' end + customer + '%>' +
-							'<div class=%panel-body% id=%'+ itemCode +'% onclick=%AsignarCliente(@' + customer + '@,@' +custmrName+ '@,@' + isnull(telefono,'') + '@,@' + itemcode + '@,@'+ itemName +'@,@'+ color +'@,@'+ marca +'@,@'+ modelo +'@,@'+ mail +'@)% > ' +
-								'<i class=%fa fa-car% aria-hidden=%true%></i>&nbsp;&nbsp;' + itemCode + ' - ' + itemName + 
-							'</div>' +
+						'<div class=%panel-heading%  data-toggle=%collapse% data-parent=%#accordion% href=%.' ||  customer ||  '% data-trigger=%focus% >' || 
+							'<span class=%glyphicon glyphicon-user%></span>&nbsp;' || customer|| ' - '||  custmrName || ' - '||  isnull(telefono,'') || 
+						'</div>' || 
+						'<div class=%panel-collapse collapse list-group-item-'||  CASE when hijo % 2 = 0 then 'danger ' else 'info ' end ||  customer ||  '%>' || 
+							'<div class=%panel-body% id=%'||  itemCode || '% onclick=%AsignarCliente(@' ||  customer ||  '@,@' || custmrName||  '@,@' ||  isnull(telefono,'') ||  '@,@' ||  itemcode ||  '@,@'||  itemName || '@,@'||  color || '@,@'||  marca || '@,@'||  modelo || '@,@'||  mail || '@)% > ' || 
+								'<i class=%fa fa-car% aria-hidden=%true%></i>&nbsp;&nbsp;' ||  itemCode ||  ' - ' ||  itemName ||  
+							'</div>' || 
 						'</div>'	
 					else 
-						'<div class=% panel-collapse collapse list-group-item-'+ CASE when hijo % 2 = 0 then 'danger ' else 'info ' end + customer + '%>' +
-							'<div class=%panel-body% id=%'+ itemCode +'% onclick=%AsignarCliente(@' + customer + '@,@' +custmrName+ '@,@' + isnull(telefono,'') + '@,@' + itemcode + '@,@'+ itemName +'@,@'+ color +'@,@'+ marca +'@,@'+ modelo +'@,@'+ mail +'@)%> ' +
-								'<i class=%fa fa-car% aria-hidden=%true%></i>&nbsp;&nbsp;' + itemCode + ' - ' + itemName + 
+						'<div class=% panel-collapse collapse list-group-item-'||  CASE when hijo % 2 = 0 then 'danger ' else 'info ' end ||  customer ||  '%>' || 
+							'<div class=%panel-body% id=%'||  itemCode || '% onclick=%AsignarCliente(@' ||  customer ||  '@,@' || custmrName||  '@,@' ||  isnull(telefono,'') ||  '@,@' ||  itemcode ||  '@,@'||  itemName || '@,@'||  color || '@,@'||  marca || '@,@'||  modelo || '@,@'||  mail || '@)%> ' || 
+								'<i class=%fa fa-car% aria-hidden=%true%></i>&nbsp;&nbsp;' ||  itemCode ||  ' - ' ||  itemName ||  
 							'</div>' +
 						'</div>'	
 					end html 
 				from ( 
 					select 
-					cli_codigo customer
+					cast( cli_codigo as varchar) customer
 					, cli_nombres as custmrName 
 					,'' as itemCode
 					,'' as itemName
