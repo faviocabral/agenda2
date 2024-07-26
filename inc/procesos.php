@@ -1352,8 +1352,7 @@ switch ($accion)
 					)Tabla1 
 				order by customer , hijo 
 			";
-			
-			$consulta = "select * from clientes limit 10 ";
+
 			$exq = pg_query($con2, $consulta);
 			if ( !$exq )
 			{
