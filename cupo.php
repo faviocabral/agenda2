@@ -2607,7 +2607,6 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 				$("#buscando").css("display", "none")
 				//console.log( rs );//fco para ver en la consola de la web 
 				console.log('datos de busqueda antes... ', rs)
-				rs = rs.map(item => item.html)
 				if(rs){
 					console.log('datos de busqueda... ', rs)
 					//fco consulta automatizada se debe poner el mismo nombre del form como los campos del sql para que funcione auto 
@@ -2617,6 +2616,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 					rs.forEach( function ( rs2 ){ //fco recorre la lista de resultados por cada  objeto[](campos[])
 						var callid = Object.keys(rs2); //fco captura los nombres de los campos 
 						Object.keys(rs2).forEach(function(key) {  //fco recorre los campos con sus valores 
+							console.log('valor del key', key)
 							campo = "#" + callid[id] , id++; //fco esta linea es para asignar automaticamente con el campo del form -> $(#campo).val(rs2[key]) //este apartado asigna al form 
 							html = rs2[key];
 							html = html.replace(/@/g, "'");
