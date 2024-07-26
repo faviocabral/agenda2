@@ -1312,7 +1312,6 @@ switch ($accion)
 		//fco en esta consulta ulos campos deben ser iguales a las del form para que se pueda automatizar . 
 		//fco sql server toma la '' como ' en la consulta a tener en cuenta cuando se quiere trabajar con las comillas por en php uso " para que no se solapen.. 
 		//fco aqui ya armo el html para el retorno de la consulta de clientes para tener un codigo limpio en php y javascript
-
 			$consulta = 
 			"
 				select 
@@ -1353,7 +1352,8 @@ switch ($accion)
 					)Tabla1 
 				order by customer , hijo 
 			";
-
+			
+			$consulta = "select * from clientes limit 10 ";
 			$exq = pg_query($con2, $consulta);
 			if ( !$exq )
 			{
