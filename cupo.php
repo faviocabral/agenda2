@@ -2406,7 +2406,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 		        $("#myModal").modal({backdrop: "static"});
 				$("#myModal").css('width', '100%')
 
-				var url = 'http://localhost/servicios'
+				var url = 'http://172.16.16.85/servicios'
 				$('#boton_ins3').bind('click', function() { window.open(url, '_blank'); });
 				//fco recuperar datos de turnos para asignar a horarios 
 				var jqxhr1 = $.ajax( { method: "POST", url: 'inc/procesos.php', data: { accion: "configServicios" }, dataType: 'json', encoding:"ISO-8859-1"});
@@ -2898,7 +2898,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 	const enviarRecordatorio = async(data) =>{
 		// datos = {fecha , hora , telefono , cedula}
 		//verificamos si el numero tiene whatsapp 
-		await fetch(`http://localhost:4000/agenda`,{
+		await fetch(`http://172.16.16.85:5010/agenda`,{
 			method: 'POST',
 			headers:{'Content-Type': 'application/json' },
 			body: JSON.stringify(data)
@@ -2939,7 +2939,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 				}
 
 			}else{
-				let response = await fetch(`http://localhost:4000/verificar?numero=${nro}`)
+				let response = await fetch(`http://172.16.16.85:5010/verificar?numero=${nro}`)
 				response = await response.json();
 				console.log(response)
 				//controlar si valido o no 
