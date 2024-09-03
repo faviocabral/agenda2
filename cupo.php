@@ -3045,7 +3045,12 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 							
 							//enviar la notificacion al cliente si la cuenta es verificada 
 							 if(localStorage.getItem("isChecked") === '1' ){
-							 	let lugares = [ {suc: '11' , ubicacion:'', nombre: 'TALLER CHANGAN', direccion: 'Asuncion'}, ];
+							 	let lugares = [ {
+									suc: '11', 
+									ubicacion:'https://www.google.com/maps/place/Changan+Paraguay/@-25.2920459,-57.5501914,17z/data=!3m1!4b1!4m6!3m5!1s0x945dafec1a8a16ff:0xe8941b891e211026!8m2!3d-25.2920459!4d-57.5501914!16s%2Fg%2F11h57q26dk?hl=es-419&entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D',
+									nombre: 'TALLER CHANGAN', 
+									direccion: 'Av. Madame Elisa A. Lynch esq. Sta. Teresa, Asunción - Paraguay'
+								},];
 							 	let lugar =  lugares.find(item => item.suc === sucursal )
 							 	let data = {
 							 		fecha: fecha, 
