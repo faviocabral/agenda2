@@ -3045,12 +3045,33 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 							
 							//enviar la notificacion al cliente si la cuenta es verificada 
 							 if(localStorage.getItem("isChecked") === '1' ){
-							 	let lugares = [ {
-									suc: '11', 
-									ubicacion:'https://maps.app.goo.gl/squoYfk9L5hAvZ5Q8',
-									nombre: 'TALLER CHANGAN', 
-									direccion: 'Av. Madame Elisa A. Lynch esq. Sta. Teresa, Asunción - Paraguay'
-								},];
+							 	let lugares = [ 
+									{
+										suc: '11', 
+										ubicacion:'https://maps.app.goo.gl/squoYfk9L5hAvZ5Q8',
+										nombre: 'TALLER CHANGAN', 
+										direccion: 'Av. Madame Elisa A. Lynch esq. Sta. Teresa, Asunción - Paraguay'
+									},
+									{
+										suc: '12', 
+										ubicacion:'',
+										nombre: 'Suc CDE', 
+										direccion: 'Av. , Asunción - Paraguay'
+									},
+									{
+										suc: '13', 
+										ubicacion:'',
+										nombre: 'Suc Santa Rita', 
+										direccion: 'Av. , Asunción - Paraguay'
+									},
+									{
+										suc: '14', 
+										ubicacion:'',
+										nombre: 'Suc Pedro Juan', 
+										direccion: 'Av. , Asunción - Paraguay'
+									},
+
+								];
 							 	let lugar =  lugares.find(item => item.suc === sucursal )
 							 	let data = {
 							 		fecha: fecha, 
