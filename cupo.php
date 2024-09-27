@@ -3162,6 +3162,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
                                   socket.emit( 'message', { usuario: Usuario, fila: box, evento: 'eliminarRegistro' } );
                                   console.log( "Respuesta inc process" );
                                   console.log( rs );
+								  alert('elimanado... ')
                                   consultar();
 
                                   if(rs != "OK") {
