@@ -3237,6 +3237,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 			var reingreso   = ($('#reingreso').is(':checked')? $('#reingreso').val('S') : $('#reingreso').val('N')) ;
 
 			var serial = $("#modificar").serialize(); 
+			alert(serial)
 			var jqxhr = $.ajax( 
 							{ 
 								method: "POST", 
