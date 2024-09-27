@@ -2825,7 +2825,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 												'<div class="form-group">'+
 												'	<div class="input-group" style="margin-top:15px;">'+
 												'		<span class="input-group-addon campo">Contacto Preferido: </span>'+
-												'   <input type="text" name="tiempo" class="form-control" id="contacto_preferido" placeholder="tiempo" value= "' +rs2["contacto_preferido"]+ '" readonly><span id="help2" class="label label-danger"></span>'+
+												'   <input type="text" name="contacto_preferido" class="form-control" id="contacto_preferido" placeholder="tiempo" value= "' +rs2["contacto_preferido"]+ '" readonly><span id="help2" class="label label-danger"></span>'+
 												'</div>'+												
 												
 												'<div class="checkbox">'+
@@ -3244,7 +3244,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 								method: "POST", 
 								url: 'inc/procesos.php',
 								data: {
-										serial: serial, 
+										serial: serial,
 										ficha: ficha,
                                         accion: 'modificarFicha'
 										},
