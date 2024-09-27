@@ -664,7 +664,6 @@ switch ($accion)
 				, km=         '" . $serial["kilometraje"] . "' 
 				, tiempo=      " . $serial["tiempo"] . " 
 				, reingreso=   '" . $serial["reingreso"] . "' 
-
 			where id_ficha = $ficha ;
 		";
 		$exq = pg_query($con, $sql);
