@@ -2837,7 +2837,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 												'<div class="form-group" style="text-align:right;">'+
 												'   <button id="boton_con" type="button" class="btn btn-default btn-user" onClick="confirmacion('+ ficha +')"><span class="glyphicon glyphicon-refresh"></span> Recordatorio</button>'+
 												'   <button id="boton_con" type="button" class="btn btn-warning btn-user" onClick="confirmar('+ ficha +')"><span class="glyphicon glyphicon-refresh"></span> Confirmar</button>'+
-												'   <button id="boton_upd" type="button" class="btn btn-info " onClick="modificarficha2(' + ficha +','+ box +',@'+ hor +'@)"><span class="glyphicon glyphicon-refresh"></span> Modificar</button>'+
+												'   <button id="boton_upd" type="button" class="btn btn-info " onClick="modificarficha(' + ficha +','+ box +',@'+ hor +'@)"><span class="glyphicon glyphicon-refresh"></span> Modificar</button>'+
 												'   <button id="boton_ins" type="button" class="btn btn-success btn-user" onClick="atenderficha(' + ficha +','+ box +',@'+ hor +'@)"><span class="glyphicon glyphicon-ok"></span> Atender</button>'+
 												'   <button id="boton_del" type="button" class="btn btn-danger btn-user" onClick="eliminarficha(' + ficha +','+ box +',@'+ hor +'@)"><span class="glyphicon glyphicon-trash"></span> Eliminar</button><span>&nbsp;&nbsp;&nbsp;</span> '+
 												'   <button type="button" class="btn btn-default" onclick="desvincularFichaAbierta()" data-dismiss="modal"><span class="glyphicon glyphicon-off"></span> Cancelar</button>'+
@@ -3237,7 +3237,6 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 			var reingreso   = ($('#reingreso').is(':checked')? $('#reingreso').val('S') : $('#reingreso').val('N')) ;
 
 			var serial = $("#modificar").serialize(); 
-			alert(serial)
 			var jqxhr = $.ajax( 
 							{ 
 								method: "POST", 
@@ -3493,7 +3492,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 												'  </select>'+
 												'</div><span id="help4"></span>'+ 
 												'<div class="form-group" style="text-align:right;">'+
-												'   <button id="boton_ins" type="button" disabled class="btn btn-warning" onClick="modificarficha2(' + ficha +','+ box +',@'+ hor +'@)">Modificarrrr</button>'+
+												'   <button id="boton_ins" type="button" disabled class="btn btn-warning" onClick="modificarficha(' + ficha +','+ box +',@'+ hor +'@)">Modificarrrr</button>'+
 												'   <button id="boton_ins" type="button" disabled class="btn btn-success" onClick="atenderficha(' + ficha +','+ box +',@'+ hor +'@)">Atender</button>'+
 												'   <button id="boton_ins" type="button" disabled class="btn btn-danger" onClick="eliminarficha(' + ficha +','+ box +',@'+ hor +'@)">Eliminar</button><span>&nbsp;&nbsp;&nbsp;</span> '+
 									
