@@ -2786,7 +2786,8 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 												'	<div class="input-group">'+
 												'		<span class="input-group-addon campo">Vehiculo: </span>'+
 												'   <input type="text" name="vehiculo" class="form-control" id="vehiculo" placeholder="Vehiculo" value= "' +rs2["vehiculo"]+ '"><span id="help2" class="label label-danger"></span>'+
-												'</div>'+
+												'	</div>'+
+												'	<div class="input-group-btn"><button class="btn btn-default" type="button" onclick="buscarVehiculo()" data-toggle="modal" data-target="#myModal2"><i class="glyphicon glyphicon-search"></i></button></div>'+
 												'</div>'+
 												'<div class="form-group">'+
 												'	<div class="input-group">'+
