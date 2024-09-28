@@ -2783,6 +2783,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 												'</div>'+
 												'</div>'+
 
+												'<div class="form-group">'+
 												'<div class="input-group">'+
 												'	<span class="input-group-addon campo">Vehiculo: </span>'+
 												'	<input type="textbox" id="vehiculo" class="form-control vehiculo" value="" placeholder="Vehiculo" readonly="">'+
@@ -2790,7 +2791,7 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 												'		<button class="btn btn-default" type="button" onclick="buscarVehiculo()" data-toggle="modal" data-target="#myModal2"><i class="glyphicon glyphicon-search"></i></button>'+
 												'	</div>'	+
 												'</div>'+
-
+												'</div'+
 												'<div class="form-group">'+
 												'	<div class="input-group">'+
 												'		<span class="input-group-addon campo">kilometraje: </span>'+
