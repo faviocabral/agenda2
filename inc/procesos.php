@@ -1318,7 +1318,7 @@ switch ($accion)
 							'<span class=%glyphicon glyphicon-user%></span>&nbsp;' || customer|| ' - '||  custmrName || ' - '||  coalesce(telefono,'') || 
 						'</div>' || 
 						'<div class=%panel-collapse collapse list-group-item-'||  CASE when 1 % 2 = 0 then 'danger ' else 'info ' end ||  customer ||  '%>' || 
-							'<div class=%panel-body% id=%'||  itemCode || '% onclick=%AsignarCliente(@' ||  customer ||  '@,@' || custmrName||  '@,@' ||  coalesce(telefono,'') ||  '@,@' ||  itemcode ||  '@,@'||  itemName || '@,@'||  color || '@,@'||  marca || '@,@'||  modelo || '@,@'||  mail || '@)% > ' || 
+							'<div class=%panel-body% id=%'||  itemCode || '% onclick=%AsignarCliente(@' ||  customer ||  '@,@' || custmrName||  '@,@' ||  coalesce(telefono,'') ||  '@,@' ||  itemcode ||  '@,@'||  itemName || '@,@'||  color || '@,@'||  marca || '@,@'||  modelo || '@)% > ' || 
 								'<i class=%fa fa-car% aria-hidden=%true%></i>&nbsp;&nbsp;' ||  itemCode ||  ' click ! ' ||  itemName ||  
 							'</div>' || 
 						'</div>'	
