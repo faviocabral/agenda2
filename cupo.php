@@ -2248,12 +2248,12 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 						'   	<input type="text" class="form-control" id="celular" placeholder="Celular"><span id="help3" class="label label-danger"></span>'+
 						'	</div>'+
 						'</div>'+
-						'<div class="form-group">'+
-						'	<div class="input-group">'+
-						'		<span class="input-group-addon campo">Mail: </span>'+
-						'   	<input type="text" class="form-control" id="mail" placeholder="mail"><span id="help5" class="label label-danger"></span>'+
-						'	</div>'+
-						'</div>'+
+						// '<div class="form-group">'+
+						// '	<div class="input-group">'+
+						// '		<span class="input-group-addon campo">Mail: </span>'+
+						// '   	<input type="text" class="form-control" id="mail" placeholder="mail"><span id="help5" class="label label-danger"></span>'+
+						// '	</div>'+
+						// '</div>'+
 						'<div class="form-group">'+
 						'	<div class="input-group">'+
 						'		<span class="input-group-addon campo">Comentario: </span>'+
@@ -2755,11 +2755,11 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 												'   <input type="text" name="celular" class="form-control" id="celular" placeholder="Celular" value= "' +rs2["celular"]+ '"><span id="help3" class="label label-danger"></span>'+
 												'</div>'+
 												'</div>'+
-												'<div class="form-group">'+
-												'	<div class="input-group">'+
-												'		<span class="input-group-addon campo">Correo: </span>'+
-												'   <input type="text" name="correo" class="form-control" id="correo" placeholder="correo" ><span id="help3" class="label label-danger"></span>'+
-												'</div>'+
+												// '<div class="form-group">'+
+												// '	<div class="input-group">'+
+												// '		<span class="input-group-addon campo">Correo: </span>'+
+												// '   <input type="text" name="correo" class="form-control" id="correo" placeholder="correo" ><span id="help3" class="label label-danger"></span>'+
+												// '</div>'+
 												'</div>'+
 
 
