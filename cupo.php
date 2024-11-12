@@ -3070,9 +3070,9 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 									},
 									{
 										suc: '14', 
-										ubicacion:'',
+										ubicacion:'https://maps.app.goo.gl/Fam9gZ8Gj9W93Un2A',
 										nombre: 'Suc Pedro Juan', 
-										direccion: 'Av. , Asunción - Paraguay'
+										direccion: 'direccion parana country club: Parana Country Club - CDE Paraguay TEL 061 579481 R.A.'
 									},
 
 								];
