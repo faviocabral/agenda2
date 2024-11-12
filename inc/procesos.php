@@ -1321,7 +1321,7 @@ switch ($accion)
 							'<div class=%panel-body% id=%'||  itemCode || '% onclick=%AsignarCliente(@' ||  customer ||  '@,@' || custmrName||  '@,@' ||  coalesce(telefono,'') ||  '@,@' ||  itemcode ||  '@,@'||  itemName || '@,@'||  color || '@,@'||  marca || '@,@'||  modelo || '@)% > ' || 
 								'<i class=%fa fa-car% aria-hidden=%true%></i>&nbsp;&nbsp;' ||  itemCode ||  ' click ! ' ||  itemName ||  
 							'</div>' || 
-						'</div>'	
+						'</div>' 
 					html 
 				from ( 
 					select 

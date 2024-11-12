@@ -3052,21 +3052,21 @@ window.setInterval(function(){ $.post('refresh_session.php'); },300000);
 							 	let lugares = [ 
 									{
 										suc: '11', 
-										ubicacion:'https://maps.app.goo.gl/squoYfk9L5hAvZ5Q8',
+										ubicacion:'https://maps.app.goo.gl/k4s3QTutEuYhyVWS7',
 										nombre: 'TALLER CHANGAN', 
-										direccion: 'Av. Madame Elisa A. Lynch esq. Sta. Teresa, Asunción - Paraguay'
+										direccion: 'Av. Madame Elisa A. Lynch esq. Sta. Teresa, Asunción - Paraguay - Tel 021671449 - 021671397'
 									},
 									{
 										suc: '12', 
-										ubicacion:'',
+										ubicacion:'https://maps.app.goo.gl/tuuuho8NLGxaR5Ua8',
 										nombre: 'Suc CDE', 
-										direccion: 'Av. , Asunción - Paraguay'
+										direccion: 'ruta Internacional km 4 - Tel (061) 574795 R.A.'
 									},
 									{
 										suc: '13', 
-										ubicacion:'',
+										ubicacion:'https://maps.app.goo.gl/QPJZM8Z754yRr9Hf9',
 										nombre: 'Suc Santa Rita', 
-										direccion: 'Av. , Asunción - Paraguay'
+										direccion: 'Ruta 6ta. km 40 - Barrio Simuelo - Santa Rita - Tel (0673) 221841/2 '
 									},
 									{
 										suc: '14', 
